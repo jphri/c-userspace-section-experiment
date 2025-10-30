@@ -1,8 +1,8 @@
 # C Userspace Sections Experiment
 
 This repository is an experimental playground to explore an idea from low-level
-C, combining linker sections with macros to implement a form of metaprogramming
-- a concept traditionally found in higher-level languages.
+C, combining linker sections with macros to implement a form of 
+metaprogramming - a concept traditionally found in higher-level languages.
 
 ## Motivation
 
@@ -58,8 +58,8 @@ compiler-dependent features. For each custom section present, GCC provides
 a `__start_SECTION` and `__stop_SECTION` symbols to link with our program.
 
 ```
-extern __TestData __start_testcases;
-extern __TestData __stop_testcases;
+extern __TestData __start_testcases[];
+extern __TestData __stop_testcases[];
 ```
 
 And after that, we can use the linked symbols.
